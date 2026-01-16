@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="pt-16 px-8">
+  <div class="p-8">
+        {% for p in posts %}
+          {% if p %}
+            <a href="{% url 'post_detail' p.slug %}">
+              <div class="w-full border-b-3 border-r-3 border-slate-500 p-8 rounded-xl">
+                <h2 class="text-3xl">{{ p.title }}</h2>
+
+                <p class="pt-3 line-clamp-2">{{ p.content }}</p>
+
+                <div class="py-3 flex justify-between">
+                  <p>
+                    <i class="fa-solid fa-calendar"></i> &nbsp; {{ p.created }}
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-user"></i> &nbsp; {{ p.author }}
+                  </p>
+                </div>
+              </div>
+            </a>
+
+          {% endif %}
+        {% endfor %}
+  </div>
+</section>
+{% endblock %}
