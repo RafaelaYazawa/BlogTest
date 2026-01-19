@@ -1,18 +1,19 @@
-#golden-shine-btn::before {
+.golden-shine-btn::before {
     content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background-linear: {
+    background: linear-gradient(
         120deg,
         transparent,
-        rgba(255, 255,255, 0.4)
-    }
-    transition: left 0.5s ease-out
+        rgba(255, 255,255, 0.4),
+        transparent
+    );
+    transition: left 0.5s ease-out;
 }
 
-#golden-shine-btn:hover::before {
+.golden-shine-btn:hover::before {
     left: 100%;
 }
