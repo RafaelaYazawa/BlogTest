@@ -4,16 +4,24 @@
 
 {% block content %}
 
-<div class="max-w-md mx-auto mt-30 p-8 border-2 border-slate-500 rounded-xl">
-  <h2 class="text-2xl font-bolder pb-8">Login</h2>
-  <form class="max-w-md mx-auto">
+<div class="max-w-md mx-auto mt-30 mb-10 p-8 border-2 border-slate-500 rounded-xl">
+  <h2 class="text-2xl font-bolder pb-5">Login</h2>
+  <form class="max-w-md mx-auto" method="post">
     {% csrf_token %}
     <div class="max-w-sm mx-auto">
       <div class="mb-5">
         <label for="username" class="block mb-2.5 text-sm font-medium">Username:</label>
-        <input type="text" id="username" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body">
+        <input type="text" name="username" id="username" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="John Smith" required>
+      </div>
+
+      <div>
+        <label for="password" class="block mb-2.5 text-sm font-medium">Password</label>
+        <input type="password" name="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="********" required >
       </div>
     </div>
+
+    <button type="submit" class="border rounded-xl mt-5 px-4 py-2 bg-amber-300/70 shadow-md/60 shadow-orange-500/30 cursor-pointer">Log in</button>
+
   </form>
 </div>
 
