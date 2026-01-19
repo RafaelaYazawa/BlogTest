@@ -60,11 +60,13 @@
             If something here resonates, you’re welcome to stay for as long as you wish.
         </p>
 
-        <button type="button" class="border border-indigo-500 p-3 rounded rounded-lg">
-            <a href="{% url 'login' %}">
-                Login
-            </a>
-        </button>
+        <div class="py-3 place-self-center">
+             <a href="{% url 'login' %}" class="text-lg">
+                <button type="button" class="border bg-amber-300/80 shadow-md shadow-neutral-700/50 px-6 py-2 rounded rounded-lg cursor-pointer">
+                    Login
+                </button>
+             </a>
+        </div>
     </div>
 </section>
 
