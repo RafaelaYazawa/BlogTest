@@ -12,11 +12,12 @@
         <div class="relative p-8 z-10  flex-col items-center text-center">
             <h1 class="text-5xl font-bolder lg:text-7xl">Welcome SafeTour Blog</h1>
             <p class="p-3 place-self-center text-xl">This blog is a safe space for you to write freely!</p>
-              <a href="{% url 'timeline' %}">
-                <button class="border rounded-xl px-8 py-2 mt-8 cursor-pointer" type="button">
-                    See timeline
+
+            <a href="{% url 'feed' %}">
+                <button class="golden-shine-btn border overflow-hidden relative rounded-xl px-8 py-2 mt-8 cursor-pointer hover:bg-amber-500/20 hover:border-amber-200" type="button">
+                    See feed
                 </button>
-              </a>
+            </a>
         </div>
     </section>
 </main>
