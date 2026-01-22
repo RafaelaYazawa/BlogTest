@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rafaYaz.apps.RafaYazConfig'
+    'users.apps.UsersConfig',
+    'rafaYaz.apps.RafaYazConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = 'feed'
+LOGOUT_REDIRECT_URL = 'index'

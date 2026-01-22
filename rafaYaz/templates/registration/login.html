@@ -4,19 +4,20 @@
 
 {% block content %}
 
-<div class="max-w-md mx-auto mt-30 mb-10 p-8 border-2 border-slate-500 rounded-xl">
-  <h2 class="text-2xl font-bolder pb-5">Login</h2>
-  <form class="max-w-md mx-auto" method="post">
+<div class="flex-1 flex items-center justify-center px-4">
+  <form method="post" class="w-2xs sm:w-sm sm:max-w-sm mx-auto mt-30 mb-15 p-8 border-2 border-slate-500 rounded-xl">
     {% csrf_token %}
-    <div class="max-w-sm mx-auto">
-      <div class="mb-5">
+    <h2 class="text-2xl font-bolder pb-5">Login</h2>
+
+    <div class="space-y-5">
+      <div>
         <label for="username" class="block mb-2.5 text-sm font-medium">Username:</label>
-        <input type="text" name="username" id="username" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="John Smith" required>
+        <input type="text" name="username" id="username" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-neutral-500" placeholder="JohnSmith" required>
       </div>
 
       <div>
         <label for="password" class="block mb-2.5 text-sm font-medium">Password</label>
-        <input type="password" name="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="********" required >
+        <input type="password" name="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-neutral-500" placeholder="********" required >
       </div>
     </div>
 
