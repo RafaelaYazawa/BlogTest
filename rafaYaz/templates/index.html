@@ -4,33 +4,32 @@
 {% block title %} Posts {% endblock %}
 
 {% block content %}
-<div class="absolute inset-0 bg-black/70"></div>
 
-
-<main class="w-full h-screen lg:h-[100vh] bg-cover bg-center text-white" style="background-image:url({% static 'img/xbuilding.jpeg' %})">
+<main class="relative w-full h-screen lg:h-[100vh] bg-cover bg-center text-white" style="background-image:url({% static 'img/xbuilding.jpeg' %})">
+    <div class="absolute inset-0 bg-black/70"></div>
     <section class="mt-8 h-full flex justify-center items-center">
         <div class="relative p-8 z-10  flex-col items-center text-center">
             <h1 class="text-5xl font-bolder lg:text-7xl">Welcome SafeTour Blog</h1>
             <p class="p-3 place-self-center text-xl">This blog is a safe space for you to write freely!</p>
 
-            <a href="{% url 'feed' %}">
-                <button class="golden-shine-btn border overflow-hidden relative rounded-xl px-8 py-2 mt-8 cursor-pointer hover:bg-amber-500/20 hover:border-amber-200" type="button">
-                    See feed
+            <a href="{% url 'login' %}">
+                <button class="golden-shine-btn border overflow-hidden relative rounded-xl px-8 py-2 mt-3 cursor-pointer hover:bg-amber-500/20 hover:border-amber-200" type="button">
+                    Login
                 </button>
             </a>
         </div>
     </section>
 </main>
 
-<section class="lg:pt-16 lg:px-8 lg:pb-8">
-    <div>
-        <h2 class="text-3xl text-center font-bolder md:text-7xl md:text-start">SafeTour</h2>
-        <div class="p-5 md:py-8 md:px-2 md:flex md:gap-3 lg:gap-0 md:justify-between">
+<section class="lg:pt-8 lg:px-8 lg:pb-8">
+    <div class="mt-8">
+        <h2 class="text-3xl mb-3 text-center font-bolder md:text-7xl md:text-start">SafeTour</h2>
+        <div class="px-5 py-2 md:py-8 md:px-2 md:flex md:gap-3 lg:gap-0 md:justify-between">
             <img src="{% static 'img/box.jpg' %}" alt="" class="rounded-2xl m-auto md:w-[20em] lg:w-[33em] object-cover object-left">
 
-            <div class="py-5 my-auto lg:w-1/2 lg:py-2 text-justify text-lg text-zinc-800">
-                <p class="my-auto text-lg md:text-sm lg:text-xl lg:tracking-wide lg:font-stretch-100% lg:leading-8 subpixel-antialiased">
-                    Safetour is a safe, personal, and collective space for thoughts, stories, moments and experiences- no matter how trivial they may seem.
+            <div class="pt-5 pb-1 my-auto lg:w-1/2 lg:py-2 text-justify text-lg text-zinc-800">
+                <p class="my-auto text-base leading-8  md:text-sm lg:text-xl lg:tracking-wide lg:font-stretch-100% lg:leading-8 subpixel-antialiased">
+                    Safetour is a safe, personal, and collective space for thoughts, stories, moments and experiences - no matter how trivial they may seem.
                     <br>
                     Here, writing doesn't need to be perfect. It just needs to be honest.
                     <br>
@@ -43,28 +42,28 @@
 
 
 <section class="lg:px-8">
-    <div class="p-5 md:py-8 md:px-2 md:flex md:gap-3 lg:gap-0 md:justify-between">
-        <div class="py-5 my-auto lg:w-1/2 lg:py-2 text-justify text-lg text-zinc-800">
-            <p class="my-auto text-lg md:text-sm lg:text-xl lg:tracking-wide lg:font-stretch-100% lg:leading-8 subpixel-antialiased">
+    <div class="px-5 py-2 md:py-8 md:px-2 md:flex md:gap-3 lg:gap-0 md:justify-between">
+        <div class="pt-1 pb-3 my-auto lg:w-1/2 lg:py-2 text-justify text-lg text-zinc-800">
+            <p class="my-auto text-base leading-8 md:text-sm lg:text-xl lg:tracking-wide lg:font-stretch-100% lg:leading-8 subpixel-antialiased">
                 SafeTour is for people who thinks deeply, feel quietly, and remain curious about the small things - especially the ones that often go unnoticed. It's for those who move through the world observing more than they speak, collecting fragments of meaning along the way.
                 <br>
-                The name <i>SafeTour</i> came naturally while building this space. It reflects the idea that reflection itself is a journey - one that deserves, patience, and care. This is a place to walk slowly through thoughts, without pressure to arrive anywhere.
+                The name <b><i>SafeTour</i></b> came naturally while building this space. It reflects the idea that reflection itself is a journey - one that deserves, patience, and care. This is a place to walk slowly through thoughts, without pressure to arrive anywhere.
             </p>
         </div>
 
         <img src="{% static 'img/lamp.jpg' %}" alt="" class="hidden md:block rounded-2xl m-auto md:w-[20em] lg:w-[33em] object-cover object-left">
     </div>
 
-    <div class="py-16 px-auto w-2/3 place-self-center m-auto ">
-        <p class="my-auto text-lg text-center tracking-wide font-stretch-100% leading-8 subpixel-antialiased">
+    <div class="py-8 lg:my-5 px-auto w-2/3 m-auto ">
+        <p class="my-auto text-base lg:text-lg text-center lg:tracking-wide lg:font-stretch-100% leading-8 subpixel-antialiased lg:text-xl">
             This is a place to walk slowly through thoughts, without pressure to arrive anywhere.
             If something here resonates, you’re welcome to stay for as long as you wish.
         </p>
 
-        <div class="py-3 place-self-center">
-             <a href="{% url 'login' %}" class="text-lg">
+        <div class="flex justify-center items-center py-3 mx-auto ">
+             <a href="{% url 'register' %}" class="text-lg">
                 <button type="button" class="border bg-amber-300/80 shadow-md shadow-neutral-700/50 px-6 py-2 rounded rounded-lg cursor-pointer">
-                    Login
+                    Sign Up
                 </button>
              </a>
         </div>
