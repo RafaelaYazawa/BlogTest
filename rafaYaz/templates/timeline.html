@@ -6,7 +6,7 @@
         {% for p in posts %}
           {% if p %}
             <a href="{% url 'post_detail' p.slug %}">
-              <div class="w-full border-b-3 border-r-3 border-slate-500 p-8 rounded-xl">
+              <div class="w-full border-t-1 border-l-1 p-8 border-gray-900 shadow-md shadow-slate-700/50 rounded-xl">
                 <h2 class="text-3xl">{{ p.title }}</h2>
 
                 <p class="pt-3 line-clamp-2">{{ p.content }}</p>

@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="pt-30 px-8">
-         <div class="p-8 border rounded-lg">
+    <div class="mt-16 mx-8 px-8">
+         <div class="p-8 w-2/3 place-self-center rounded-lg">
             <h1 class="text-3xl">{{ post.title }}</h1>
-            <p class="p-6">{{ post.content }}</p>
+            <p class="p-5">{{ post.content }}</p>
+             <p class="text-left">
+               <i class="fa-solid fa-user"></i> &nbsp; {{ post.author }}
+             </p>
         </div>
     </div>
 
