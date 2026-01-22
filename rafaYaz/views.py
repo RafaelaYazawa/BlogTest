@@ -14,6 +14,7 @@ def timeline(request):
     }
     return render(request, 'timeline.html', context=context)
 
+@login_required
 def post(request, slug):
     post = get_object_or_404(Post, slug=slug, is_published=True)
     return render(request, 'post.html', {
