@@ -8,7 +8,7 @@ def index(request):
 
 @login_required
 def timeline(request):
-    posts = Post.objects.all()
+    posts = Post.objects.order_by('-published_at')
     context = {
         "posts": posts
     }

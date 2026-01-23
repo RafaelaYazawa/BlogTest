@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="pt-16 px-8">
-  <div class="p-8">
+<section class="mt-8 pt-8 px-8">
+  <div class="mx-auto mt-8 py-4 md:p-8 flex flex-col gap-y-5 md:grid md:grid-cols-3 md:gap-x-4 md:gap-y-6">
         {% for p in posts %}
           {% if p %}
             <a href="{% url 'post_detail' p.slug %}">
-              <div class="w-full border-t-1 border-l-1 p-8 border-gray-900 shadow-md shadow-slate-700/50 rounded-xl">
-                <h2 class="text-3xl">{{ p.title }}</h2>
+              <div class="w-full border-t-2 border-l-1 p-8 border-gray-300 shadow-md shadow-slate-700/40 rounded-xl">
+                <h2 class="text-xl md:text-2xl font-semibold">{{ p.title }}</h2>
 
-                <p class="pt-3 line-clamp-2">{{ p.content }}</p>
+                <p class="pt-3 line-clamp-5 md:line-clamp-4 text-sm antialiased">{{ p.content }}</p>
 
-                <div class="py-3 flex justify-between">
+                <div class="pt-4 text-xs md:text-sm flex flex-col md:flex-row justify-between">
                   <p>
                     <i class="fa-solid fa-calendar"></i> &nbsp; {{ p.created }}
                   </p>
@@ -21,7 +21,6 @@
                 </div>
               </div>
             </a>
-
           {% endif %}
         {% endfor %}
   </div>
