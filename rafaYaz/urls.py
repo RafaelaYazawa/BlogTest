@@ -8,4 +8,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('feed', views.timeline, name='feed'),
     path('post/<slug:slug>', views.post, name='post_detail'),
+    path('profile/<slug:slug>', views.profile, name='profile')
 ]
