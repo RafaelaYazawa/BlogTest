@@ -5,9 +5,9 @@
 {% block content %}
 
 <div class="flex-1 flex items-center justify-center px-4">
-  <form method="post" class="w-full sm:w-sm sm:max-w-sm mx-auto mt-32 mb-16 p-8 border-2 border-slate-800 rounded-xl">
+  <form method="post" class="w-full sm:w-sm sm:max-w-sm mx-auto mt-32 mb-16 p-8 border-2 border-neutral-400 rounded-xl">
     {% csrf_token %}
-    <h2 class="text-2xl font-medium pb-5">Login</h2>
+    <h2 class="text-2xl font-semibold pb-5">Login</h2>
 
     <div class="space-y-5">
       <div>
@@ -17,13 +17,11 @@
 
       <div>
         <label for="password" class="block mb-2.5 text-sm font-medium">Password</label>
-        <input type="password" name="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-2 focus:ring-brand focus:border-brand  block w-full px-3 py-2.5 shadow-xs placeholder:text-neutral-500" placeholder="********" required >
+        <input type="password" name="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-neutral-500" placeholder="********" required >
       </div>
     </div>
 
-    <button type="submit" class="border border-slate-500 rounded-xl mt-5 px-4 py-2 bg-amber-300/70 shadow-md cursor-pointer">
-      Log in
-    </button>
+    <button type="submit" class="border rounded-xl mt-5 px-4 py-2 bg-amber-300/70 shadow-md/60 shadow-orange-500/30 cursor-pointer">Log in</button>
 
   </form>
 </div>

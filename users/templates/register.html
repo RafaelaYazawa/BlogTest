@@ -6,9 +6,9 @@
 {% block content %}
 
 <div class="flex-1 flex items-center justify-center px-4">
-<form method="post" class="w-full max-w-md mx-auto mt-32 mb-16 p-8 border-2 border-slate-700 rounded-xl">
+    <form method="post" class="w-full max-w-md mx-auto mt-32 mb-16 p-8 border-2 border-neutral-500 rounded-xl">
      {% csrf_token %}
-    <h2 class="text-2xl font-bold pb-5">Sign up</h2>
+    <h2 class="text-2xl font-semibold pb-5">Sign up</h2>
 
      <div class="space-y-3">
        <div class="flex flex-col md:flex-row md:justify-between md:items-center md:gap-3">
@@ -77,9 +77,7 @@
        </div>
      </div>
 
-     <button type="submit" class="border border-slate-500 rounded-xl mt-5 px-4 py-2 bg-amber-300/70 shadow-md cursor-pointer">
-         Sign up
-     </button>
+     <button type="submit" class="border rounded-xl mt-5 px-4 py-2 bg-amber-300/70 shadow-md/60 shadow-orange-500/30 cursor-pointer">Sign up</button>
    </form>
 </div>
 {% endblock %}
